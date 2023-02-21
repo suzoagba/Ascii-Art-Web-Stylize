@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/index.css">
     <link rel="icon" type="image/x-icon" href="../static/image/favicon.ico">
-    <title>Ascii-art generator</title>
+    <title>Ascii-Art-Stylize</title>
 </head>
 <body>
     <div id="container">
-        <h2 id="header-text">Ascii-art generator</h2>
-        <p id="info-text">Ascii-art generator lets you generate ascii banner from text</p>
+        <h2 id="header-text">Ascii-Art-Stylize</h2>
+        <p id="info-text">Ascii-Art-Stylize generates Ascii banner from text</p>
         <form id="form" method="POST" action="/ascii-art">
             <div id="input-form">
-                <label id="input-label">Input text</label>
-                <textarea id="input" name="input" placeholder="Type something..."></textarea>
+                <label id="input-label">Type Here</label>
+                <textarea id="input" name="input" placeholder="Type Anything to generate output..."></textarea>
             </div>
             <div id="banner-form">
             <label>Banner: </label>
@@ -24,7 +24,7 @@
                 <option value="shadow">Shadow</option>
                 <option value="thinkertoy">Thinkertoy</option>
             </select>
-            <button id="submit-button" type="submit">Generate</button>
+            <button id="submit-button" type="submit">Initiate</button>
             </div>
         </form>
         <p id="char-error">{{.Error}}</p>

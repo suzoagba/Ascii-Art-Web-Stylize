@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	port = ":4000"
+	port = ":8080"
 	host = "http://localhost"
 )
 
@@ -36,7 +36,7 @@ func main() {
 		log.Println(err)
 		log.Fatalf("%v - internal server error", http.StatusInternalServerError)
 	}
-	
+
 }
 
 // home handler
