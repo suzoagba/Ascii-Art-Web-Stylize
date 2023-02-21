@@ -12,13 +12,20 @@ The webpage allows turning user input into ascii-art and offers the use of three
 ## How To Run
 
 1. run ```go run .```
+Server running on localhost:8080
 
 2. go to ```localhost:8080```
 
 ## Implementation
 
-The server is created in Go. Ascii-art output is created from user input by looping through predefined ascii-art characters. Design is added with CSS.
+GET /: Sends HTML response, the main page.
+
+POST /: that sends data to Go server (text and a banner) and ascii-art
+
+Displaying data from the server using go templates. Server is built using Go HTTP handlers.
 
 ## Authors
 
-Samuel Uzoagba
+Samuel Uzoagba.
+Jeremiah Bakare.
+Anton Urban.
