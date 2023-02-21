@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+    <link rel="icon" type="image/x-icon" href="../static/image/favicon.ico">
+    <title>Ascii-art generator</title>
+</head>
+<body>
+    <div id="container">
+        <h2 id="header-text">Ascii-art generator</h2>
+        <p id="info-text">Ascii-art generator lets you generate ascii banner from text</p>
+        <form id="form" method="POST" action="/ascii-art">
+            <div id="input-form">
+                <label id="input-label">Input text</label>
+                <textarea id="input" name="input" placeholder="Type something..."></textarea>
+            </div>
+            <div id="banner-form">
+            <label>Banner: </label>
+            <select name="banner" id="banner">
+                <option value="standard">Standard</option>
+                <option value="shadow">Shadow</option>
+                <option value="thinkertoy">Thinkertoy</option>
+            </select>
+            <button id="submit-button" type="submit">Generate</button>
+            </div>
+        </form>
+        <p id="char-error">{{.Error}}</p>
+        <div id="ascii-art-wrapper">
+            <div id="ascii-art">
+                <label>Output</label>
+                <pre id="ascii-art-output">
+                    '{{.Ascii}}'
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //hide ascii-art output and error if they are empty
+    var hidePre = document.getElementById("ascii-art-wrapper"); 
+    var hideError = document.getElementById("char-error"); 
+    var preValue = '{{.Ascii}}';
+    var errorValue = '{{.Error}}';
+
+    if (preValue == "") {
+        hidePre.style.display = "none";
+    }
+    if (errorValue == "") {
+        hideError.style.display = "none";
+    }
+</script>
+</html>
